@@ -54,19 +54,16 @@
         "virtualNetworkName": "[concat(parameter('customername'), '-UKS-SHS_VNET')]"
     },
     "resources": [
-      {
-        "name": "[variables('virtualNetworkName')]",
-        "type": "Microsoft.Network/virtualNetworks",
-        "apiVersion": "2019-09-01",
-        "location": "[parameters('location')]",
-        "dependsOn": [],
-        "properties": {
-          "addressSpace": {
-            "addressPrefixes": [
-              "[parameters('vnetAddressPrefix')]"
-            ]
-          }
+        {
+            "name": "[variables('virtualNetworkName')]",
+            "type": "Microsoft.Network/virtualNetworks",
+            "apiVersion": "2019-09-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": "[parameters('vnetAddressPrefix')]"
+                }
+            }
         }
-      }
     ]
   }

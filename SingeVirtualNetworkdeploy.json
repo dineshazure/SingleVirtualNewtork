@@ -65,8 +65,7 @@
             "addressPrefixes": [
               "[parameters('vnetAddressPrefix')]"
             ]
-          },
-          "enableDdosProtection": "[parameters('ddosProtectionPlanEnabled')]"
+          }
         }
       }
     ]

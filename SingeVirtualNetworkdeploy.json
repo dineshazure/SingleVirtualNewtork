@@ -23,7 +23,7 @@
     }
 },
     "variables": {
-        "virtualNetworkName": "[concat(parameter('customername'), '-UKS-SHS_VNET')]"
+        "virtualNetworkName": "[concat(parameters('customername'),'-UKS-SHS_VNET')]"
     },
     "resources": [
         {

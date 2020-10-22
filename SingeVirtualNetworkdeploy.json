@@ -19,34 +19,6 @@
         "type": "string",
         "metadata": {
             "description": "Please provide valid address space for the virtual network"
-      },
-      "ddosProtectionPlanEnabled": {
-        "type": "bool",
-        "defaultValue": false,
-        "metadata": {
-          "description": "DDos Protection."
-        }
-      },
-      "ipv6Enabled": {
-        "type": "bool",
-        "defaultValue": false,
-        "metadata": {
-          "description": "IPv6 should be true or false"
-        }
-      },
-      "firewallEnabled": {
-        "type": "bool",
-        "defaultValue": false,
-        "metadata": {
-          "description": "Firewall Enable."
-        }
-      },
-      "bastionEnabled": {
-        "type": "bool",
-        "defaultValue": false,
-        "metadata": {
-          "description": "Bastion Enable."
-        }
       }
     }
 },

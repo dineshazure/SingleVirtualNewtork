@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Practice Cloud (3f140c58-e05c-4274-977c-2f68e1b499d5)'
+    subscriptionId: '3f140c58-e05c-4274-977c-2f68e1b499d5'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Dinesh_New'
+    location: 'UK South'
+    templateLocation: 'Linked artifact'
+    csmFile: 'SingeVirtualNetworkdeploy.json'
+    csmParametersFile: 'SingeVirtualNetworkdeploy.Parameters.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'SingleVnet-Creation'
